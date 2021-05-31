@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "572368284782",
-    "project_id": "bab8-65f20",
-    "storage_bucket": "bab8-65f20.appspot.com"
+    "project_number": "1016883644578",
+    "project_id": "bab-8-12489",
+    "storage_bucket": "bab-8-12489.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:572368284782:android:4980da24274efc06ba0a7f",
+        "mobilesdk_app_id": "1:1016883644578:android:68680639b75e650daceffb",
         "android_client_info": {
           "package_name": "com.example.bab8"
         }
       },
       "oauth_client": [
         {
-          "client_id": "572368284782-i4o3hdbj4ro2jeds00185k79jviqv2vs.apps.googleusercontent.com",
+          "client_id": "1016883644578-fa0cko5fsb64u401484nrh1v0ke70ni3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bab8",
+            "certificate_hash": "a3365715286504fc695e69077d812d2853481e16"
+          }
+        },
+        {
+          "client_id": "1016883644578-oi2vqiurtacpph7pnfbts31hcsbungnv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBgGvwAX1m0497tGgO2JOec7l2YLCfZ72o"
+          "current_key": "AIzaSyB5-Ytk3VuwJ90ZlrNg3Whgxng2LmFb8Rw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "572368284782-i4o3hdbj4ro2jeds00185k79jviqv2vs.apps.googleusercontent.com",
+              "client_id": "1016883644578-oi2vqiurtacpph7pnfbts31hcsbungnv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
