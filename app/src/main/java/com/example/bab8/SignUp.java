@@ -77,13 +77,15 @@ public class SignUp extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String dataSnapshot = snapshot.child(userKey).getKey();
 
+                assert dataSnapshot != null;
                 if (dataSnapshot.equalsIgnoreCase(userKey)) {
                     startActivity(new Intent(SignUp.this, ProfileActivity.class));
-                    finish();
                 } else {
-                    startActivity(new Intent(SignUp.this, FormProfileActivity.class));
-                    finish();
+                    Intent intent = new Intent(SignUp.this, FormProfileActivity.class);
+                    intent.putExtra("FIRST", true);
+                    startActivity(intent);
                 }
+                finish();
             }
 
             @Override
