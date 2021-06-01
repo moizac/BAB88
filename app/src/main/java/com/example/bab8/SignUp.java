@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthMethodPickerLayout;
@@ -75,10 +76,9 @@ public class SignUp extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String dataSnapshot = snapshot.child(userKey).getKey();
+                boolean dataSnapshot = snapshot.hasChild(userKey);
 
-                assert dataSnapshot != null;
-                if (dataSnapshot.equalsIgnoreCase(userKey)) {
+                if (dataSnapshot) {
                     startActivity(new Intent(SignUp.this, ProfileActivity.class));
                 } else {
                     Intent intent = new Intent(SignUp.this, FormProfileActivity.class);
@@ -99,7 +99,7 @@ public class SignUp extends AppCompatActivity {
         int loadingTime = 3000;
         new Handler().postDelayed(() -> {
             if (firebaseUser != null) {
-                startActivity(new Intent(SignUp.this, FormProfileActivity.class));
+                startActivity(new Intent(SignUp.this, ProfileActivity.class));
                 finish();
             } else {
                 doSignIn();
