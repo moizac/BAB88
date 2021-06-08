@@ -2,6 +2,7 @@ package com.example.bab8;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,11 +15,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class FormProfileActivity extends AppCompatActivity {
     private EditText nim, nama, kelas;
+    private boolean first;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_profile);
+
+        first = getIntent().getBooleanExtra("FIRST", false);
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -41,6 +45,11 @@ public class FormProfileActivity extends AppCompatActivity {
                     );
 
                     databaseReference.child(userKey).setValue(model);
+
+                    if (first) {
+                        startActivity(new Intent(FormProfileActivity.this, ProfileActivity.class));
+                    }
+                    finish();
                 }
             }
         });

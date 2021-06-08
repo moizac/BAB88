@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1016883644578",
+    "firebase_url": "https://bab-8-12489-default-rtdb.firebaseio.com",
     "project_id": "bab-8-12489",
     "storage_bucket": "bab-8-12489.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1016883644578-0rbl5jknabvuv2i65pgnmve04t3f4v06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bab8",
+            "certificate_hash": "6c13f68d06f9ea656e282421cbef6ae0e43764a1"
+          }
+        },
         {
           "client_id": "1016883644578-fa0cko5fsb64u401484nrh1v0ke70ni3.apps.googleusercontent.com",
           "client_type": 1,
